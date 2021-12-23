@@ -50,16 +50,17 @@ while year!=2015:
 
 # following code is bugged
 months = {}
-for year_item in years.items():
-    for item in year_item:
-        print(type(item))
-        if type(item) == str:
-            year_str = item
-        elif type(item) == list:
-            month_list=item
-            for i in month_list:
-                print(i)
-                months[year_str].append(i)
+for j in range(0,13):
+    months[str(j)] = []
+    for year_item in years.items():
+        for item in year_item:
+            print(type(item))
+            if type(item) == list:
+                month_list=item
+                for i in range(len(month_list)):
+                    if i==j:
+                        months[str(j)].append(month_list[i])
+    j+=1
 
 # Create a map representation
 # ax = plt.axes(projection=ccrs.PlateCarree())
