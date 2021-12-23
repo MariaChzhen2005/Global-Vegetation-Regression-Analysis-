@@ -47,8 +47,7 @@ while year!=2015:
         print(str(year))
         
     year +=1
-
-# following code is bugged
+    
 months = {}
 for j in range(0,13):
     months[str(j)] = []
