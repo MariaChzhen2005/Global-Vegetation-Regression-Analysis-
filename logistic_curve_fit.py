@@ -15,7 +15,7 @@ def residuals(p,x,y):
   # difference between observed value of the response variable and the value of the response variable predicted from the regression line
     return y - sigmoid(p,x)
 
-# define variables
+# define variables, normalize for better standardization
 NDVI = preprocessing.normalize([NDVI])[0]
 y = NDVI
 x = preprocessing.normalize([np.arange(20)])[0]
@@ -46,3 +46,4 @@ plt.xlabel('Time')
 plt.ylabel('NDVI')
 plt.grid(True)
 plt.show()
+
